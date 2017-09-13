@@ -2,7 +2,7 @@
 using K9.Globalisation;
 using K9.SharedLibrary.Extensions;
 
-namespace K9.DataAccess.Attributes
+namespace K9.DataAccessLayer.Attributes
 {
 	[AttributeUsage(AttributeTargets.Class)]
 	public class GrammarAttribute : Attribute

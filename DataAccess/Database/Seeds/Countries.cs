@@ -1,9 +1,9 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Linq;
-using K9.DataAccess.Models;
+using K9.DataAccessLayer.Models;
 
-namespace K9.DataAccess.Database.Seeds
+namespace K9.DataAccessLayer.Database.Seeds
 {
 	public static class CountriesSeeder
 	{

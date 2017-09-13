@@ -1,8 +1,8 @@
 ﻿
 using System.Globalization;
 using System.Threading;
-using K9.DataAccess.Enums;
-using K9.DataAccess.Extensions;
+using K9.DataAccessLayer.Enums;
+using K9.DataAccessLayer.Extensions;
 using Xunit;
 
 namespace K9.DataAccess.Tests.Unit

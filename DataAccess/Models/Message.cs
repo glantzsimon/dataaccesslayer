@@ -1,13 +1,12 @@
-﻿
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using K9.DataAccess.Attributes;
+using K9.DataAccessLayer.Attributes;
 using K9.Globalisation;
 using K9.SharedLibrary.Attributes;
 using K9.SharedLibrary.Models;
 
-namespace K9.DataAccess.Models
+namespace K9.DataAccessLayer.Models
 {
 
     public enum EMessageDirection

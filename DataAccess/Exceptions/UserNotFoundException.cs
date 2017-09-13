@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace K9.DataAccess.Exceptions
+namespace K9.DataAccessLayer.Exceptions
 {
 	public class UserNotFoundException : ApplicationException
 	{

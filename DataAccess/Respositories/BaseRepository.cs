@@ -1,14 +1,13 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using K9.DataAccess.Extensions;
+using K9.DataAccessLayer.Extensions;
 using K9.SharedLibrary.Extensions;
 using K9.SharedLibrary.Models;
 
-namespace K9.DataAccess.Respositories
+namespace K9.DataAccessLayer.Respositories
 {
 	public class BaseRepository<T> : IRepository<T> where T : class, IObjectBase
 	{

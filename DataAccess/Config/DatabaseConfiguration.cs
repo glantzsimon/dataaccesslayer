@@ -1,6 +1,6 @@
 ﻿
 
-namespace K9.DataAccess.Config
+namespace K9.DataAccessLayer.Config
 {
 	public class DatabaseConfiguration
 	{

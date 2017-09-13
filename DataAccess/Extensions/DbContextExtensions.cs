@@ -5,7 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using K9.SharedLibrary.Models;
 
-namespace K9.DataAccess.Extensions
+namespace K9.DataAccessLayer.Extensions
 {
 	public static class DbContextExtensions
 	{

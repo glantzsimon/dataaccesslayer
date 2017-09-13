@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using K9.DataAccess.Exceptions;
-using K9.DataAccess.Models;
+using K9.DataAccessLayer.Exceptions;
+using K9.DataAccessLayer.Models;
 using K9.SharedLibrary.Models;
 using WebMatrix.WebData;
 
-namespace K9.DataAccess.Helpers
+namespace K9.DataAccessLayer.Helpers
 {
 	public class Roles : IRoles
 	{

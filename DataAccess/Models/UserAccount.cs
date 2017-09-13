@@ -1,10 +1,9 @@
-﻿
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 using Foolproof;
 using K9.Globalisation;
 
-namespace K9.DataAccess.Models
+namespace K9.DataAccessLayer.Models
 {
 	public class UserAccount
 	{
