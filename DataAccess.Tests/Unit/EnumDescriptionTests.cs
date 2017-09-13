@@ -28,12 +28,13 @@ namespace K9.DataAccess.Tests.Unit
 			Assert.Equal("Français", francais);
 		}
 
-		public void ELanguage_GetLanguageCode_ShouldReturnCorrectLanguageCode()
+	    [Fact]
+        public void ELanguage_GetLanguageCode_ShouldReturnCorrectLanguageCode()
 		{
 			var languageCode = ELanguage.English.GetLanguageCode();
 			var languageCodeFr = ELanguage.French.GetLanguageCode();
 			
-			Assert.Equal("en", languageCode);
+			Assert.Equal("en-GB", languageCode);
 			Assert.Equal("fr", languageCodeFr);
 		}
 

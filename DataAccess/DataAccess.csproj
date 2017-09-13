@@ -52,8 +52,8 @@
     <Reference Include="FoolproofValidation, Version=0.9.5851.39121, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Foolproof.0.9.4518\lib\net45\FoolproofValidation.dll</HintPath>
     </Reference>
-    <Reference Include="K9.Globalisation, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\K9.Globalisation.1.0.0.3\lib\net461\K9.Globalisation.dll</HintPath>
+    <Reference Include="K9.Globalisation, Version=1.0.0.9, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\K9.Globalisation.1.0.0.9\lib\net461\K9.Globalisation.dll</HintPath>
     </Reference>
     <Reference Include="K9.SharedLibrary, Version=1.0.0.18, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\K9.SharedLibrary.18.0.0\lib\net461\K9.SharedLibrary.dll</HintPath>
@@ -225,7 +225,7 @@
     <Compile Include="Respositories\BaseRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

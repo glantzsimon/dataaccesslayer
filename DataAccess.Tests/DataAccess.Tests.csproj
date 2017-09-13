@@ -48,6 +48,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="K9.Globalisation, Version=1.0.0.9, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\K9.Globalisation.1.0.0.9\lib\net461\K9.Globalisation.dll</HintPath>
+    </Reference>
     <Reference Include="K9.SharedLibrary, Version=1.0.0.18, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\K9.SharedLibrary.18.0.0\lib\net461\K9.SharedLibrary.dll</HintPath>
     </Reference>
@@ -186,7 +189,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Unit\EnumDescriptionTests.cs" />
-    <Compile Include="Unit\RepositoryTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
