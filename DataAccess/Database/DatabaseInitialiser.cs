@@ -1,14 +1,15 @@
-﻿using System;
-using System.Data.Entity.Migrations;
-using System.IO;
-using K9.DataAccessLayer.Config;
+﻿using K9.DataAccessLayer.Config;
 using K9.DataAccessLayer.Database.Seeds;
 using K9.SharedLibrary.Helpers;
+using System;
+using System.Data.Entity.Migrations;
+using System.IO;
 using WebMatrix.WebData;
 
 namespace K9.DataAccessLayer.Database
 {
-	public class DatabaseInitialiser : DbMigrationsConfiguration<Db>
+    public class DatabaseInitialiser<T> : DbMigrationsConfiguration<T>
+        where T : Db
 	{
 
 		public DatabaseInitialiser()
@@ -41,7 +42,7 @@ namespace K9.DataAccessLayer.Database
 			}
 		}
 
-		protected override void Seed(Db context)
+		protected override void Seed(T context)
 		{
 			CountriesSeeder.SeedCountries(context);
 		}
