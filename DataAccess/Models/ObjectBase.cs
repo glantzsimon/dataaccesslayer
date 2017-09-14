@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Reflection;
 using System.Web.Routing;
-using K9.DataAccessLayer.Attributes;
+using K9.Base.DataAccessLayer.Attributes;
 using K9.Globalisation;
 using K9.SharedLibrary.Attributes;
 using K9.SharedLibrary.Authentication;
@@ -14,7 +14,7 @@ using K9.SharedLibrary.Extensions;
 using K9.SharedLibrary.Models;
 using WebMatrix.WebData;
 
-namespace K9.DataAccessLayer.Models
+namespace K9.Base.DataAccessLayer.Models
 {
 	public abstract class ObjectBase : IObjectBase, IValidatableObject
 	{

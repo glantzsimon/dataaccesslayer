@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using K9.DataAccessLayer.Attributes;
+using K9.Base.DataAccessLayer.Attributes;
 using K9.Globalisation;
 
-namespace K9.DataAccessLayer.Models
+namespace K9.Base.DataAccessLayer.Models
 {
 	[Grammar(ResourceType = typeof(Dictionary), DefiniteArticleName = Strings.Grammar.CountryDefiniteArticle, IndefiniteArticleName = Strings.Grammar.CountryIndefiniteArticle)]
 	[Name(ResourceType = typeof(Dictionary), Name = Strings.Names.Country, PluralName = Strings.Names.Countries, ListName = "Countries")]

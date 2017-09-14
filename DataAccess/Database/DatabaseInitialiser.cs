@@ -1,12 +1,12 @@
-﻿using K9.DataAccessLayer.Config;
-using K9.DataAccessLayer.Database.Seeds;
-using K9.SharedLibrary.Helpers;
-using System;
+﻿using System;
 using System.Data.Entity.Migrations;
 using System.IO;
+using K9.Base.DataAccessLayer.Config;
+using K9.Base.DataAccessLayer.Database.Seeds;
+using K9.SharedLibrary.Helpers;
 using WebMatrix.WebData;
 
-namespace K9.DataAccessLayer.Database
+namespace K9.Base.DataAccessLayer.Database
 {
     public class DatabaseInitialiser<T> : DbMigrationsConfiguration<T>
         where T : Db

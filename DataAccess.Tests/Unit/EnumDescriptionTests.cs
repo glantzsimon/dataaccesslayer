@@ -1,11 +1,10 @@
-﻿
-using System.Globalization;
+﻿using System.Globalization;
 using System.Threading;
-using K9.DataAccessLayer.Enums;
-using K9.DataAccessLayer.Extensions;
+using K9.Base.DataAccessLayer.Enums;
+using K9.Base.DataAccessLayer.Extensions;
 using Xunit;
 
-namespace K9.DataAccess.Tests.Unit
+namespace K9.DataAccessLayer.Tests.Unit
 {
 	public class EnumDescriptionTests
 	{

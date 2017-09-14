@@ -1,12 +1,12 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using K9.DataAccessLayer.Attributes;
+using K9.Base.DataAccessLayer.Attributes;
 using K9.Globalisation;
 using K9.SharedLibrary.Models;
 using WebMatrix.WebData;
 
-namespace K9.DataAccessLayer.Models
+namespace K9.Base.DataAccessLayer.Models
 {
 	[Grammar(ResourceType = typeof(Dictionary), DefiniteArticleName = Strings.Grammar.DefiniteArticleWithApostrophe, IndefiniteArticleName = Strings.Grammar.MasculineIndefiniteArticle, OfPrepositionName = Strings.Grammar.OfPrepositionWithApostrophe)]
 	[Name(ResourceType = typeof(Dictionary), Name = Strings.Names.User)]

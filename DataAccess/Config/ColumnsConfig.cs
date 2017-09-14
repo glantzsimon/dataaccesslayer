@@ -2,7 +2,7 @@
 using System.Linq;
 using K9.SharedLibrary.Models;
 
-namespace K9.DataAccessLayer.Config
+namespace K9.Base.DataAccessLayer.Config
 {
 	public class ColumnsConfig : IColumnsConfig
 	{

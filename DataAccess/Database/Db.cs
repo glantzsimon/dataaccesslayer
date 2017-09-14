@@ -1,8 +1,8 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using K9.DataAccessLayer.Models;
+using K9.Base.DataAccessLayer.Models;
 
-namespace K9.DataAccessLayer.Database
+namespace K9.Base.DataAccessLayer.Database
 {
 	public class Db : DbContext
 	{

@@ -1,8 +1,8 @@
 ﻿using System;
-using K9.DataAccessLayer.Attributes;
+using K9.Base.DataAccessLayer.Attributes;
 using K9.SharedLibrary.Extensions;
 
-namespace K9.DataAccessLayer.Extensions
+namespace K9.Base.DataAccessLayer.Extensions
 {
 	public static class EnumExtensions
 	{

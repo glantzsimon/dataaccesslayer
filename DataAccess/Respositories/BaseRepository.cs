@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using K9.DataAccessLayer.Extensions;
+using K9.Base.DataAccessLayer.Extensions;
 using K9.SharedLibrary.Extensions;
 using K9.SharedLibrary.Models;
 
-namespace K9.DataAccessLayer.Respositories
+namespace K9.Base.DataAccessLayer.Respositories
 {
 	public class BaseRepository<T> : IRepository<T> where T : class, IObjectBase
 	{

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace K9.DataAccessLayer.Exceptions
+namespace K9.Base.DataAccessLayer.Exceptions
 {
 	public class RoleNotFoundException : ApplicationException
 	{

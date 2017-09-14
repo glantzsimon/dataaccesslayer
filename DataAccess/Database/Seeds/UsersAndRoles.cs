@@ -2,16 +2,16 @@
 using System.Data.Entity;
 using System.IO;
 using System.Linq;
-using K9.DataAccessLayer.Config;
-using K9.DataAccessLayer.Helpers;
-using K9.DataAccessLayer.Models;
-using K9.DataAccessLayer.Respositories;
+using K9.Base.DataAccessLayer.Config;
+using K9.Base.DataAccessLayer.Helpers;
+using K9.Base.DataAccessLayer.Models;
+using K9.Base.DataAccessLayer.Respositories;
 using K9.SharedLibrary.Authentication;
 using K9.SharedLibrary.Helpers;
 using K9.SharedLibrary.Models;
 using WebMatrix.WebData;
 
-namespace K9.DataAccessLayer.Database.Seeds
+namespace K9.Base.DataAccessLayer.Database.Seeds
 {
 	public static class UsersAndRolesSeeder
 	{

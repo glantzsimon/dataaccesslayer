@@ -1,7 +1,7 @@
-﻿using K9.DataAccessLayer.Attributes;
+﻿using K9.Base.DataAccessLayer.Attributes;
 using K9.Globalisation;
 
-namespace K9.DataAccessLayer.Enums
+namespace K9.Base.DataAccessLayer.Enums
 {
 	public enum ELanguage
 	{

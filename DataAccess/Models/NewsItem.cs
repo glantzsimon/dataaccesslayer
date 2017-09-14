@@ -1,15 +1,15 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
-using K9.DataAccessLayer.Attributes;
-using K9.DataAccessLayer.Enums;
-using K9.DataAccessLayer.Extensions;
+using K9.Base.DataAccessLayer.Attributes;
+using K9.Base.DataAccessLayer.Enums;
+using K9.Base.DataAccessLayer.Extensions;
 using K9.Globalisation;
 using K9.SharedLibrary.Attributes;
 using K9.SharedLibrary.Enums;
 using K9.SharedLibrary.Models;
 
-namespace K9.DataAccessLayer.Models
+namespace K9.Base.DataAccessLayer.Models
 {
 
 	[AutoGenerateName]

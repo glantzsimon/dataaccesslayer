@@ -1,10 +1,10 @@
 ﻿using System.Data.Entity;
 using System.Linq;
-using K9.DataAccessLayer.Exceptions;
-using K9.DataAccessLayer.Models;
+using K9.Base.DataAccessLayer.Exceptions;
+using K9.Base.DataAccessLayer.Models;
 using K9.SharedLibrary.Models;
 
-namespace K9.DataAccessLayer.Helpers
+namespace K9.Base.DataAccessLayer.Helpers
 {
 	public class Users : IUsers
 	{
