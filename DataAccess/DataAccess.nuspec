@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>197900</id>
+    <id>$id$</id>
     <version>$version$</version>
     <title>$title$</title>
-    <authors>Glantz Software Consulting LTD</authors>
+    <authors>$author$</authors>
     <owners>$author$</owners>
     <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
     <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
