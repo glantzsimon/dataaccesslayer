@@ -8,8 +8,8 @@
     <ProjectGuid>{20948D36-2ABE-4429-B175-AF781A5F6CB3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>K9.DataAccessLayer</RootNamespace>
-    <AssemblyName>K9.DataAccessLayer</AssemblyName>
+    <RootNamespace>K9.Base.DataAccessLayer</RootNamespace>
+    <AssemblyName>K9.Base.DataAccessLayer</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
