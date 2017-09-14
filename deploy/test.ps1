@@ -1,4 +1,4 @@
-$testFile = "DataAccess.Tests\bin\Release\K9.DataAccess.Tests"
+$testFile = ".\DataAccess.Tests\bin\Release\K9.DataAccess.Tests.dll"
 	
 function ProcessErrors(){
   if($? -eq $false)
@@ -10,7 +10,7 @@ function ProcessErrors(){
 function _Test() {
   echo "Running tests"
   
-  "packages\xunit.runner.console.2.2.0\tools\xunit.console.exe " + $testFile
+  packages\xunit.runner.console.2.2.0\tools\xunit.console.exe $testFile
   ProcessErrors
 }
 
