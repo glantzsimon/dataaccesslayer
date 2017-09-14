@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using Foolproof;
-using K9.Globalisation;
+using K9.Base.Globalisation;
 
 namespace K9.Base.DataAccessLayer.Models
 {

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Web.Routing;
 using K9.Base.DataAccessLayer.Attributes;
-using K9.Globalisation;
+using K9.Base.Globalisation;
 using K9.SharedLibrary.Attributes;
 using K9.SharedLibrary.Authentication;
 using K9.SharedLibrary.Exceptions;
