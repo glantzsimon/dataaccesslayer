@@ -1,4 +1,4 @@
-$testFile = ".\DataAccess.Tests\bin\Release\K9.DataAccess.Tests.dll"
+$testFile = ".\DataAccess.Tests\bin\Release\K9.DataAccessLayer.Tests.dll"
 	
 function ProcessErrors(){
   if($? -eq $false)
