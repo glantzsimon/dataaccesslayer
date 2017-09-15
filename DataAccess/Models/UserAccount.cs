@@ -1,6 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using Foolproof;
+using DataAnnotationsExtensions;
 using K9.Base.Globalisation;
 
 namespace K9.Base.DataAccessLayer.Models
