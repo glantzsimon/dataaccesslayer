@@ -10,7 +10,7 @@ function ProcessErrors(){
 function _Test() {
   echo "Running tests"
   
-  packages\xunit.runner.console.2.2.0\tools\xunit.console.exe $testFile
+  c:\xunit\runner\xunit.console.exe $testFile
   ProcessErrors
 }
 
