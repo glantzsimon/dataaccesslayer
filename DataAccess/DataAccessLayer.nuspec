@@ -1,14 +1,15 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>$id$</id>
-    <version>$version$</version>
-    <title>$title$</title>
-    <authors>$author$</authors>
-    <owners>$author$</owners>
-    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
-    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
-    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <id>K9.DataAccessLayer</id>
+    <version>20.0.0.90</version>
+    <title>DataAccessLayer</title>
+    <authors>Glantz Software Consulting LTD</authors>
+    <owners>Glantz Software Consulting LTD</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://glantzconsulting.co.uk</licenseUrl>
+    <projectUrl>http://glantzconsulting.co.uk</projectUrl>
+    <iconUrl>http://glantzconsulting.co.uk</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Data Access Layer Boiler Plate</description>
     <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
@@ -17,5 +18,6 @@
   </metadata>
   <files>
     <file src="bin\$configuration$\fr\*.dll" target="lib\net461\fr" />
+	<file src="bin\$configuration$\*.dll" target="lib\net461" />
   </files>
 </package>
