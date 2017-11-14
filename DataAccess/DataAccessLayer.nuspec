@@ -5,8 +5,7 @@
     <version>20.0.0.90</version>
     <title>DataAccessLayer</title>
     <authors>Glantz Software Consulting LTD</authors>
-    <owners>Glantz Software Consulting LTD</owners>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <owners>Glantz Software Consulting LTD</owners>    
     <licenseUrl>http://glantzconsulting.co.uk</licenseUrl>
     <projectUrl>http://glantzconsulting.co.uk</projectUrl>
     <iconUrl>http://glantzconsulting.co.uk</iconUrl>
