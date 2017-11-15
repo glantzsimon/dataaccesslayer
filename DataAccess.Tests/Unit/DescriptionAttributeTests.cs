@@ -11,7 +11,7 @@ namespace K9.DataAccessLayer.Tests.Unit
         [Fact]
         public void GetLocalisedDescription_ShouldRespondToAttribute_AndLanguage()
         {
-            Thread.CurrentThread.CurrentCulture = new CultureInfo("fr");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
 
             var role = new Role
             {
@@ -24,7 +24,7 @@ namespace K9.DataAccessLayer.Tests.Unit
                 LastName = "Glantz"
             };
 
-            Assert.Equal("Utilisateur Puissant", role.Description);
+            Assert.Equal("Power User", role.Description);
             Assert.Equal("Simon Glantz", user.Description);
         }
 
