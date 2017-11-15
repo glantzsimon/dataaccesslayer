@@ -114,15 +114,21 @@ namespace K9.Base.DataAccessLayer.Models
 
 		public string GetLocalisedDescription()
 		{
-			try
-			{
-				return typeof(Dictionary).GetValueFromResource(Name);
-			}
-			catch (Exception)
-			{
-			}
+		    var type = GetType();
+		    var descriptionAttribute = type.GetCustomAttribute<DescriptionAttribute>();
+		    if (descriptionAttribute?.UseLocalisedString == true)
+		    {
+		        try
+		        {
+		            return typeof(Dictionary).GetValueFromResource(Name);
+		        }
+		        catch (Exception)
+		        {
+		        }
+            }
 
-			return Name;
+		    var descriptionField = descriptionAttribute?.DescriptionField ?? "Name";
+            return this.GetProperty(descriptionField).ToString();
 		}
 
 		public void UpdateAuditFields()

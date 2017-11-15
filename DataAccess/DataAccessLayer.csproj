@@ -112,6 +112,7 @@
     <Compile Include="Attributes\GrammarAttribute.cs" />
     <Compile Include="Attributes\AutoGenerateNameAttribute.cs" />
     <Compile Include="Attributes\DefaultPermissionsAttribute.cs" />
+    <Compile Include="Attributes\DescriptionAttribute.cs" />
     <Compile Include="Attributes\NameAttribute.cs" />
     <Compile Include="Config\DatabaseConfiguration.cs" />
     <Compile Include="Database\Seeds\Countries.cs" />
