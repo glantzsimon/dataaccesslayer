@@ -88,20 +88,20 @@ namespace K9.Base.DataAccessLayer.Database.Seeds
 			        roles.AddPermissionsToRole(instance.EditPermissionName, RoleNames.PowerUsers);
 			        if (isDefault)
 			        {
-			            roles.AddPermissionsToRole(instance.CreatePermissionName, RoleNames.DefaultUsers);
+			            roles.AddPermissionsToRole(instance.EditPermissionName, RoleNames.DefaultUsers);
 			        }
 
 			        roles.CreatePermission(instance.DeletePermissionName, true);
 			        if (isDefault)
 			        {
-			            roles.AddPermissionsToRole(instance.CreatePermissionName, RoleNames.DefaultUsers);
+			            roles.AddPermissionsToRole(instance.DeletePermissionName, RoleNames.DefaultUsers);
 			        }
 
 			        roles.CreatePermission(instance.ViewPermissionName, true);
 			        roles.AddPermissionsToRole(instance.ViewPermissionName, RoleNames.PowerUsers);
 			        if (isDefault)
 			        {
-			            roles.AddPermissionsToRole(instance.CreatePermissionName, RoleNames.DefaultUsers);
+			            roles.AddPermissionsToRole(instance.ViewPermissionName, RoleNames.DefaultUsers);
 			        }
 			    }
 			}
