@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>K9.DataAccessLayer</id>
-    <version>20.0.0.90</version>
+    <id>K9.Base.DataAccessLayer</id>
+    <version>1.0.0.0</version>
     <title>DataAccessLayer</title>
     <authors>Glantz Software Consulting LTD</authors>
     <owners>Glantz Software Consulting LTD</owners>    
