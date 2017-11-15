@@ -6,6 +6,7 @@ using K9.Base.DataAccessLayer.Enums;
 using K9.Base.DataAccessLayer.Extensions;
 using K9.Base.Globalisation;
 using K9.SharedLibrary.Attributes;
+using K9.SharedLibrary.Authentication;
 using K9.SharedLibrary.Enums;
 using K9.SharedLibrary.Models;
 
@@ -15,7 +16,8 @@ namespace K9.Base.DataAccessLayer.Models
 	[AutoGenerateName]
 	[Grammar(ResourceType = typeof(Dictionary), DefiniteArticleName = Strings.Grammar.FeminineDefiniteArticle, IndefiniteArticleName = Strings.Grammar.FeminineIndefiniteArticle)]
 	[Name(ResourceType = typeof(Dictionary), Name = Strings.Names.NewsItem)]
-	public class NewsItem : ObjectBase
+	[DefaultPermissions(Role = RoleNames.DefaultUsers)]
+    public class NewsItem : ObjectBase
 	{
 		
 		[Display(ResourceType = typeof(Dictionary), Name = Strings.Labels.PublishedOnLabel)]

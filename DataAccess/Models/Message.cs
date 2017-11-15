@@ -1,10 +1,11 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using K9.Base.DataAccessLayer.Attributes;
+﻿using K9.Base.DataAccessLayer.Attributes;
 using K9.Base.Globalisation;
 using K9.SharedLibrary.Attributes;
+using K9.SharedLibrary.Authentication;
 using K9.SharedLibrary.Models;
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace K9.Base.DataAccessLayer.Models
 {
@@ -18,6 +19,7 @@ namespace K9.Base.DataAccessLayer.Models
 	[AutoGenerateName]
 	[Grammar(ResourceType = typeof(Dictionary), DefiniteArticleName = Strings.Grammar.MasculineDefiniteArticle, IndefiniteArticleName = Strings.Grammar.MasculineIndefiniteArticle)]
 	[Name(ResourceType = typeof(Dictionary), Name = Strings.Names.Message)]
+    [DefaultPermissions(Role = RoleNames.DefaultUsers)]
 	public class Message : ObjectBase, IUserData
 	{
 		
