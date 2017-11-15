@@ -51,11 +51,14 @@ namespace K9.Base.DataAccessLayer.Models
 
 		[Display(ResourceType = typeof(Dictionary), Name = Strings.Labels.SubjectLabel)]
 		[StringLength(256)]
-		public string Subject { get; set; }
+		[Required(ErrorMessageResourceType = typeof(Dictionary), ErrorMessageResourceName = Strings.ErrorMessages.FieldIsRequired)]
+        public string Subject { get; set; }
 
 		[Display(ResourceType = typeof(Dictionary), Name = Strings.Labels.BodyLabel)]
 		[StringLength(Int32.MaxValue)]
-		public string Body { get; set; }
+        [DataType(DataType.Html)]
+		[Required(ErrorMessageResourceType = typeof(Dictionary), ErrorMessageResourceName = Strings.ErrorMessages.FieldIsRequired)]
+        public string Body { get; set; }
 
 		public virtual User User { get; set; }
 
