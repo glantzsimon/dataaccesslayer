@@ -1,13 +1,15 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using K9.Base.DataAccessLayer.Attributes;
+﻿using K9.Base.DataAccessLayer.Attributes;
 using K9.Base.Globalisation;
 using K9.SharedLibrary.Attributes;
+using K9.SharedLibrary.Authentication;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace K9.Base.DataAccessLayer.Models
 {
-	[AutoGenerateName]
-	public class RolePermission : ObjectBase
+    [AutoGenerateName]
+	[DefaultPermissions(Role = RoleNames.Administrators)]
+    public class RolePermission : ObjectBase
 	{
 		[ForeignKey("Role")]
 		[UIHint("Role")]
