@@ -9,6 +9,8 @@ namespace K9.Base.DataAccessLayer.Models
 {
     [AutoGenerateName]
 	[DefaultPermissions(Role = RoleNames.Administrators)]
+    [Grammar(ResourceType = typeof(Dictionary), DefiniteArticleName = Strings.Grammar.FeminineDefiniteArticle, IndefiniteArticleName = Strings.Grammar.FeminineIndefiniteArticle)]
+    [Name(ResourceType = typeof(Dictionary), Name = Strings.Names.RolePermission, PluralName = Strings.Names.RolePermissions)]
     public class RolePermission : ObjectBase
 	{
 		[ForeignKey("Role")]
