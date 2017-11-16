@@ -128,7 +128,7 @@ namespace K9.Base.DataAccessLayer.Models
             }
 
 		    var descriptionField = descriptionAttribute?.DescriptionField ?? "Name";
-            return this.GetProperty(descriptionField).ToString();
+            return this.GetProperty(descriptionField)?.ToString();
 		}
 
 		public void UpdateAuditFields()
