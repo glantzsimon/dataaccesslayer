@@ -5,6 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using K9.Base.DataAccessLayer.Attributes;
+using K9.Base.DataAccessLayer.Models;
 using K9.SharedLibrary.Extensions;
 using K9.SharedLibrary.Models;
 
@@ -30,7 +31,9 @@ namespace K9.Base.DataAccessLayer.Extensions
 
 		public static string GetName(this DbContext context, string tableName, int id)
 		{
-		    var entityType = Type.GetType(tableName);
+		    var entityType = typeof(ObjectBase).Assembly.GetTypes()
+		        .Where(t => t.IsClass && !t.IsAbstract && t.IsSubclassOf(typeof(ObjectBase)))
+		        .FirstOrDefault(t => t.Name == tableName);
 		    var nameExpression = entityType.GetCustomAttribute<NameAttribute>()?.DefaultNameExpression ?? "Name";
             return Dapper.SqlMapper.Query<string>(context.Database.Connection,
 			    $"SELECT {nameExpression} FROM [{tableName}] WHERE [Id] = {id}").First();
