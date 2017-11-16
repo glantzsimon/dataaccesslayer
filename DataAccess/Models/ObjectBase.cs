@@ -152,7 +152,9 @@ namespace K9.Base.DataAccessLayer.Models
 
 		public virtual void UpdateName() { }
 
-		public RouteValueDictionary GetForeignKeyFilterRouteValues()
+	    public virtual void Validated() { }
+
+        public RouteValueDictionary GetForeignKeyFilterRouteValues()
 		{
 			return new StatelessFilter(GetForeignKeyName(), Id).GetFilterRouteValues();
 		}
@@ -164,6 +166,7 @@ namespace K9.Base.DataAccessLayer.Models
 			{
 				yield return new ValidationResult(Dictionary.FieldIsRequired, new[] { "Name" });
 			}
+		    Validated();
 		}
 
 		public List<PropertyInfo> GetFileSourceProperties()

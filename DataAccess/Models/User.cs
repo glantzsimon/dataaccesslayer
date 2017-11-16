@@ -11,7 +11,7 @@ namespace K9.Base.DataAccessLayer.Models
 {
     [AutoGenerateName]
     [Grammar(ResourceType = typeof(Dictionary), DefiniteArticleName = Strings.Grammar.DefiniteArticleWithApostrophe, IndefiniteArticleName = Strings.Grammar.MasculineIndefiniteArticle, OfPrepositionName = Strings.Grammar.OfPrepositionWithApostrophe)]
-    [Name(ResourceType = typeof(Dictionary), Name = Strings.Names.User, DefaultNameExpression = "FirstName + ' ' + LastName")]
+    [Name(ResourceType = typeof(Dictionary), Name = Strings.Names.User, DefaultNameExpression = "FullName")]
     [Description(DescriptionField = "FullName")]
     [DefaultPermissions(Role = RoleNames.Administrators)]
     public class User : ObjectBase, IUser
@@ -19,7 +19,7 @@ namespace K9.Base.DataAccessLayer.Models
 
         [StringLength(128)]
         [Display(ResourceType = typeof(Dictionary), Name = Strings.Labels.NameLabel)]
-        public string FullName => $"{FirstName} {LastName}";
+        public string FullName { get; set; }
 
         [StringLength(56)]
         [Required(ErrorMessageResourceType = typeof(Dictionary), ErrorMessageResourceName = Strings.ErrorMessages.FieldIsRequired)]
@@ -60,5 +60,10 @@ namespace K9.Base.DataAccessLayer.Models
 
         [Display(ResourceType = typeof(Dictionary), Name = Strings.Labels.AccountActivated)]
         public bool IsActivated => !string.IsNullOrEmpty(Username) && WebSecurity.Initialized && WebSecurity.IsConfirmed(Username);
+
+        public override void Validated()
+        {
+            FullName = $"{FirstName} {LastName}";
+        }
     }
 }

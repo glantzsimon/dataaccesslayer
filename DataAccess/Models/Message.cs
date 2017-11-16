@@ -66,15 +66,15 @@ namespace K9.Base.DataAccessLayer.Models
 
 		public virtual User SentToUser { get; set; }
 
-		[LinkedColumn(LinkedTableName = "User", LinkedColumnName = "Name", ForeignKey = "SentToUserId")]
+		[LinkedColumn(LinkedTableName = "User", LinkedColumnName = "FullName", ForeignKey = "SentToUserId")]
 		[Display(ResourceType = typeof(Dictionary), Name = Strings.Labels.SentToUserLabel)]
 		public string SentToUserName { get; set; }
 
-		[LinkedColumn(LinkedTableName = "User", LinkedColumnName = "Name", ForeignKey = "SentByUserId")]
+		[LinkedColumn(LinkedTableName = "User", LinkedColumnName = "FullName", ForeignKey = "SentByUserId")]
 		[Display(ResourceType = typeof(Dictionary), Name = Strings.Labels.SentByUserLabel)]
 		public string SentByUserName { get; set; }
 
-		[LinkedColumn(LinkedTableName = "User", LinkedColumnName = "Name", ForeignKey = "UserId")]
+		[LinkedColumn(LinkedTableName = "User", LinkedColumnName = "FullName", ForeignKey = "UserId")]
 		[Display(ResourceType = typeof(Dictionary), Name = Strings.Names.User)]
 		public string UserName { get; set; }
 
