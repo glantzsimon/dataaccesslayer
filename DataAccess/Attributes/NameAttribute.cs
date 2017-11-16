@@ -9,7 +9,11 @@ namespace K9.Base.DataAccessLayer.Attributes
 		public string Name { get; set; }
 		public string PluralName { get; set; }
 		public string ListName { get; set; }
-		public Type ResourceType { get; set; }
+        /// <summary>
+        /// Sql expression to be used in the GetName method
+        /// </summary>
+	    public string DefaultNameExpression { get; set; }
+	    public Type ResourceType { get; set; }
 
 		public string GetName()
 		{

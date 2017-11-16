@@ -11,7 +11,7 @@ namespace K9.Base.DataAccessLayer.Models
 {
     [AutoGenerateName]
     [Grammar(ResourceType = typeof(Dictionary), DefiniteArticleName = Strings.Grammar.DefiniteArticleWithApostrophe, IndefiniteArticleName = Strings.Grammar.MasculineIndefiniteArticle, OfPrepositionName = Strings.Grammar.OfPrepositionWithApostrophe)]
-    [Name(ResourceType = typeof(Dictionary), Name = Strings.Names.User)]
+    [Name(ResourceType = typeof(Dictionary), Name = Strings.Names.User, DefaultNameExpression = "FirstName + ' ' + LastName")]
     [Description(DescriptionField = "FullName")]
     [DefaultPermissions(Role = RoleNames.Administrators)]
     public class User : ObjectBase, IUser
