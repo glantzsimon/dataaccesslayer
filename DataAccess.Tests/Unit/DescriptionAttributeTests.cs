@@ -23,6 +23,7 @@ namespace K9.DataAccessLayer.Tests.Unit
                 FirstName = "Simon",
                 LastName = "Glantz"
             };
+            user.Validated();
 
             Assert.Equal("Power User", role.Description);
             Assert.Equal("Simon Glantz", user.Description);
