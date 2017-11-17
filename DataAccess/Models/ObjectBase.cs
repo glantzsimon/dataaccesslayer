@@ -49,7 +49,10 @@ namespace K9.Base.DataAccessLayer.Models
 		[Display(ResourceType = typeof(Dictionary), Name = Strings.Labels.SystemStandard)]
 		public bool IsSystemStandard { get; set; }
 
-		[NotMapped]
+	    [Display(ResourceType = typeof(Dictionary), Name = Strings.Labels.IsDeletedLabel)]
+        public bool IsDeleted { get; set; }
+
+        [NotMapped]
 		public bool IsSelected { get; set; }
 
 		[Display(ResourceType = typeof(Dictionary), Name = Strings.Labels.DescriptionLabel)]

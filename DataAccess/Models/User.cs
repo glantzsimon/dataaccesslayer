@@ -14,6 +14,7 @@ namespace K9.Base.DataAccessLayer.Models
     [Name(ResourceType = typeof(Dictionary), Name = Strings.Names.User, DefaultNameExpression = "FullName")]
     [Description(DescriptionField = "FullName")]
     [DefaultPermissions(Role = RoleNames.Administrators)]
+    [SoftDelete]
     public class User : ObjectBase, IUser
     {
 
@@ -60,7 +61,7 @@ namespace K9.Base.DataAccessLayer.Models
 
         [Display(ResourceType = typeof(Dictionary), Name = Strings.Labels.AccountActivated)]
         public bool IsActivated => !string.IsNullOrEmpty(Username) && WebSecurity.Initialized && WebSecurity.IsConfirmed(Username);
-
+        
         public override void Validated()
         {
             FullName = $"{FirstName} {LastName}";

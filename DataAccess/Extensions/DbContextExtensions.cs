@@ -74,13 +74,13 @@ namespace K9.Base.DataAccessLayer.Extensions
 
 		public static void Delete<T>(this DbContext context, int id) where T : class, IObjectBase
 		{
-			T item = context.Set<T>().Find(id);
-			if (item == null)
-			{
-				throw new IndexOutOfRangeException();
-			}
-			Delete(context, item);
-		}
+		    T item = context.Set<T>().Find(id);
+		    if (item == null)
+		    {
+		        throw new IndexOutOfRangeException();
+		    }
+		    Delete(context, item);
+        }
 
 		public static void DeleteBatch<T>(this DbContext context, List<int> ids) where T : class, IObjectBase
 		{
@@ -99,19 +99,35 @@ namespace K9.Base.DataAccessLayer.Extensions
 
 		public static void Delete<T>(this DbContext context, T item) where T : class, IObjectBase
 		{
-			context.Set<T>().Attach(item);
-			context.Set<T>().Remove(item);
-			context.SaveChanges();
+		    if (typeof(T).HasAttribute(typeof(SoftDeleteAttribute)))
+		    {
+		        item.IsDeleted = true;
+		        Update(context, item);
+		    }
+		    else
+		    {
+		        context.Set<T>().Attach(item);
+		        context.Set<T>().Remove(item);
+		        context.SaveChanges();
+            }
 		}
 
 		public static void DeleteBatch<T>(this DbContext context, List<T> items) where T : class, IObjectBase
 		{
-			foreach (var item in items)
-			{
-				context.Set<T>().Attach(item);
-				context.Set<T>().Remove(item);
-			}
-			context.SaveChanges();
+		    if (typeof(T).HasAttribute(typeof(SoftDeleteAttribute)))
+		    {
+		        items.ForEach(_ => _.IsDeleted = true);
+                UpdateBatch(context, items);
+		    }
+		    else
+		    {
+		        foreach (var item in items)
+		        {
+		            context.Set<T>().Attach(item);
+		            context.Set<T>().Remove(item);
+		        }
+                context.SaveChanges();
+		    }
 		}
 
 		public static bool Exists<T>(this DbContext context, int id) where T : class, IObjectBase

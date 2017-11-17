@@ -34,6 +34,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\K9.SharedLibrary.20.0.0.57\lib\net461\Antlr3.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
     </Reference>
@@ -41,13 +44,25 @@
       <HintPath>..\packages\DataAnnotationsExtensions.5.0.1.16\lib\NETFramework40\DataAnnotationsExtensions.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\K9.SharedLibrary.20.0.0.54\lib\net461\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\K9.SharedLibrary.20.0.0.57\lib\net461\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="K9.Base.Globalisation, Version=1.0.0.21, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\K9.Base.Globalisation.1.0.0.21\lib\net461\K9.Base.Globalisation.dll</HintPath>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\K9.SharedLibrary.20.0.0.57\lib\net461\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="K9.SharedLibrary, Version=1.0.0.54, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\K9.SharedLibrary.20.0.0.54\lib\net461\K9.SharedLibrary.dll</HintPath>
+    <Reference Include="K9.Base.Globalisation, Version=1.0.0.22, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\K9.Base.Globalisation.1.0.0.22\lib\net461\K9.Base.Globalisation.dll</HintPath>
+    </Reference>
+    <Reference Include="K9.SharedLibrary, Version=1.0.0.57, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\K9.SharedLibrary.20.0.0.57\lib\net461\K9.SharedLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\K9.SharedLibrary.20.0.0.57\lib\net461\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\K9.SharedLibrary.20.0.0.57\lib\net461\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\K9.SharedLibrary.20.0.0.57\lib\net461\NLog.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.AppContext, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -100,8 +115,26 @@
     </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\K9.SharedLibrary.20.0.0.57\lib\net461\System.Web.Helpers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\K9.SharedLibrary.20.0.0.54\lib\net461\System.Web.Mvc.dll</HintPath>
+      <HintPath>..\packages\K9.SharedLibrary.20.0.0.57\lib\net461\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\K9.SharedLibrary.20.0.0.57\lib\net461\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\K9.SharedLibrary.20.0.0.57\lib\net461\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\K9.SharedLibrary.20.0.0.57\lib\net461\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\K9.SharedLibrary.20.0.0.57\lib\net461\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\K9.SharedLibrary.20.0.0.57\lib\net461\WebGrease.dll</HintPath>
     </Reference>
     <Reference Include="WebMatrix.WebData, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.3.2.3\lib\net45\WebMatrix.WebData.dll</HintPath>
@@ -113,6 +146,7 @@
     <Compile Include="Attributes\AutoGenerateNameAttribute.cs" />
     <Compile Include="Attributes\DefaultPermissionsAttribute.cs" />
     <Compile Include="Attributes\DescriptionAttribute.cs" />
+    <Compile Include="Attributes\SoftDeleteAttribute.cs" />
     <Compile Include="Attributes\NameAttribute.cs" />
     <Compile Include="Config\DatabaseConfiguration.cs" />
     <Compile Include="Database\Seeds\Countries.cs" />
