@@ -49,12 +49,6 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\K9.SharedLibrary.20.0.0.57\lib\net461\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="K9.Base.Globalisation, Version=1.0.0.22, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\K9.Base.Globalisation.1.0.0.22\lib\net461\K9.Base.Globalisation.dll</HintPath>
-    </Reference>
-    <Reference Include="K9.SharedLibrary, Version=1.0.0.57, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\K9.SharedLibrary.20.0.0.57\lib\net461\K9.SharedLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\K9.SharedLibrary.20.0.0.57\lib\net461\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
@@ -178,6 +172,16 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\globalisation\Globalisation\Globalisation.csproj">
+      <Project>{8c362653-0486-486d-aef6-e82c1a9f049e}</Project>
+      <Name>Globalisation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\sharedlibrary\SharedLibrary\SharedLibrary.csproj">
+      <Project>{1030c285-fb19-4d76-8e0b-01eaca67bd31}</Project>
+      <Name>SharedLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -66,5 +66,15 @@ namespace K9.Base.DataAccessLayer.Models
         {
             FullName = $"{FirstName} {LastName}";
         }
+
+        /// <summary>
+        /// Updates the Name and Email fields to auto generated values so that other users may use them
+        /// </summary>
+        public void SetToDeleted()
+        {
+            var username = Guid.NewGuid().ToString();
+            Username = username;
+            EmailAddress = $"{username.Replace("-", "_")}@deleted.user";
+        }
     }
 }
