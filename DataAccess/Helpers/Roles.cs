@@ -137,7 +137,7 @@ namespace K9.Base.DataAccessLayer.Helpers
 			}
 		}
 
-		public void AddUserToRole(string username, string roleName)
+		public void AddUserToRole(string username, string roleName, bool isSystemStandard = false)
 		{
 			if (!UserIsInRoles(username, roleName))
 			{
@@ -146,12 +146,13 @@ namespace K9.Base.DataAccessLayer.Helpers
 				_userRolesRepository.Create(new UserRole
 				{
 					UserId = user.Id,
-					RoleId = role.Id
+					RoleId = role.Id,
+                    IsSystemStandard = isSystemStandard
 				});
 			}
 		}
 
-		public void AddPermissionsToRole(string permissionName, string roleName)
+		public void AddPermissionsToRole(string permissionName, string roleName, bool isSystemStandard = false)
 		{
 			if (!PermissionIsInRole(permissionName, roleName))
 			{
@@ -160,7 +161,8 @@ namespace K9.Base.DataAccessLayer.Helpers
 				_rolePermissionsRepository.Create(new RolePermission
 				{
 					PermissionId = permission.Id,
-					RoleId = role.Id
+					RoleId = role.Id,
+                    IsSystemStandard = isSystemStandard
 				});
 			}
 		}

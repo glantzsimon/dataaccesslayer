@@ -50,6 +50,7 @@ namespace K9.Base.DataAccessLayer.Database.Seeds
                         EmailAddress = "simon@glantzconsulting.co.uk",
 						BirthDate = DateTime.Now,
 						IsSystemStandard = true,
+                        IsDeleted = false,
 						IsUnsubscribed = false,
 						CreatedBy = SystemUser.System,
 						CreatedOn = DateTime.Now,
@@ -65,7 +66,7 @@ namespace K9.Base.DataAccessLayer.Database.Seeds
 			roles.CreateRole(RoleNames.Administrators, true);
 			roles.CreateRole(RoleNames.PowerUsers, true);
 		    roles.CreateRole(RoleNames.DefaultUsers, true);
-            roles.AddUserToRole(SystemUser.System, RoleNames.Administrators);
+            roles.AddUserToRole(SystemUser.System, RoleNames.Administrators, true);
 		}
 
 		private static void SeedPermissions(Roles roles)
@@ -73,33 +74,44 @@ namespace K9.Base.DataAccessLayer.Database.Seeds
 			foreach (var item in typeof(ObjectBase).Assembly.GetTypes().Where(t => t.IsClass && !t.IsAbstract && t.IsSubclassOf(typeof(ObjectBase))))
 			{
 				var instance = Activator.CreateInstance(item) as IPermissable;
-			    var isDefault = (item.GetAttribute<DefaultPermissionsAttribute>()?.Role == RoleNames.DefaultUsers);
-			    var isAdmin = (item.GetAttribute<DefaultPermissionsAttribute>()?.Role == RoleNames.Administrators);
+			    var defaultPermissionsAttribute = item.GetAttribute<DefaultPermissionsAttribute>();
+			    var isDefault = defaultPermissionsAttribute?.Role == RoleNames.DefaultUsers;
+			    var isAdmin = defaultPermissionsAttribute?.Role == RoleNames.Administrators;
+			    var isPowerUser = defaultPermissionsAttribute?.Role == RoleNames.PowerUsers;
 
-			    if (!isAdmin)
+                if (!isAdmin)
 			    {
 			        roles.CreatePermission(instance.CreatePermissionName, true);
-			        roles.AddPermissionsToRole(instance.CreatePermissionName, RoleNames.PowerUsers);
+			        roles.AddPermissionsToRole(instance.CreatePermissionName, RoleNames.Administrators, true);
+                    roles.AddPermissionsToRole(instance.CreatePermissionName, RoleNames.PowerUsers);
 			        if (isDefault)
 			        {
 			            roles.AddPermissionsToRole(instance.CreatePermissionName, RoleNames.DefaultUsers);
 			        }
 
 			        roles.CreatePermission(instance.EditPermissionName, true);
-			        roles.AddPermissionsToRole(instance.EditPermissionName, RoleNames.PowerUsers);
+			        roles.AddPermissionsToRole(instance.EditPermissionName, RoleNames.Administrators, true);
+                    roles.AddPermissionsToRole(instance.EditPermissionName, RoleNames.PowerUsers);
 			        if (isDefault)
 			        {
 			            roles.AddPermissionsToRole(instance.EditPermissionName, RoleNames.DefaultUsers);
 			        }
 
 			        roles.CreatePermission(instance.DeletePermissionName, true);
-			        if (isDefault)
+			        roles.AddPermissionsToRole(instance.DeletePermissionName, RoleNames.Administrators, true);
+                    if (isDefault)
 			        {
 			            roles.AddPermissionsToRole(instance.DeletePermissionName, RoleNames.DefaultUsers);
+			            roles.AddPermissionsToRole(instance.DeletePermissionName, RoleNames.PowerUsers);
+                    }
+			        else if (isPowerUser)
+			        {
+			            roles.AddPermissionsToRole(instance.DeletePermissionName, RoleNames.PowerUsers);
 			        }
 
-			        roles.CreatePermission(instance.ViewPermissionName, true);
-			        roles.AddPermissionsToRole(instance.ViewPermissionName, RoleNames.PowerUsers);
+                    roles.CreatePermission(instance.ViewPermissionName, true);
+			        roles.AddPermissionsToRole(instance.ViewPermissionName, RoleNames.Administrators, true);
+                    roles.AddPermissionsToRole(instance.ViewPermissionName, RoleNames.PowerUsers);
 			        if (isDefault)
 			        {
 			            roles.AddPermissionsToRole(instance.ViewPermissionName, RoleNames.DefaultUsers);

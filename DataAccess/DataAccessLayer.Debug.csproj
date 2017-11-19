@@ -156,6 +156,7 @@
     <Compile Include="Config\ColumnsConfig.cs" />
     <Compile Include="Helpers\Users.cs" />
     <Compile Include="Helpers\Roles.cs" />
+    <Compile Include="Models\ArchiveItem.cs" />
     <Compile Include="Models\NewsItem.cs" />
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\RolePermission.cs" />
