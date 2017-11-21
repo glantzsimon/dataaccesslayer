@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Web.Mvc;
 using K9.Base.DataAccessLayer.Attributes;
 using K9.Base.DataAccessLayer.Enums;
@@ -15,7 +16,7 @@ namespace K9.Base.DataAccessLayer.Models
 
 	[AutoGenerateName]
 	[Grammar(ResourceType = typeof(Dictionary), DefiniteArticleName = Strings.Grammar.FeminineDefiniteArticle, IndefiniteArticleName = Strings.Grammar.FeminineIndefiniteArticle)]
-	[Name(ResourceType = typeof(Dictionary), Name = Strings.Names.NewsItem)]
+	[Name(ResourceType = typeof(Dictionary), Name = Strings.Names.ArchiveItem)]
 	[DefaultPermissions(Role = RoleNames.PowerUsers)]
     public class ArchiveItem : ObjectBase
 	{
@@ -37,25 +38,32 @@ namespace K9.Base.DataAccessLayer.Models
 		[StringLength(256)]
 		public string Title { get; set; }
 
-	    [Display(ResourceType = typeof(Dictionary), Name = Strings.Labels.TitleLabel)]
+	    public virtual ArchiveCategory ArchiveCategory { get; set; }
+
+        [ForeignKey("ArchiveCategory")]
+	    [UIHint("ArchiveCategory")]
+	    [Display(ResourceType = typeof(Dictionary), Name = Strings.Names.Category)]
 	    [Required(ErrorMessageResourceType = typeof(Dictionary), ErrorMessageResourceName = Strings.ErrorMessages.FieldIsRequired)]
-	    [StringLength(256)]
-	    public string Category { get; set; }
+	    public int CategoryId { get; set; }
 
         [Display(ResourceType = typeof(Dictionary), Name = Strings.Labels.DescriptionLabel)]
 		[Required(ErrorMessageResourceType = typeof(Dictionary), ErrorMessageResourceName = Strings.ErrorMessages.FieldIsRequired)]
 		[StringLength(Int32.MaxValue)]
-		[DataType(DataType.MultilineText)]
+		[DataType(DataType.Html)]
 		[AllowHtml]
 		public string DescriptionText { get; set; }
 
 		[FileSourceInfo("Images/archive/upload", Filter = EFilesSourceFilter.Unspecified)]
-		[Display(ResourceType = typeof(Dictionary), Name = Strings.Names.UploadImages)]
+		[Display(ResourceType = typeof(Dictionary), Name = Strings.Names.UploadFiles)]
 		public FileSource FileSource { get; set; }
 
 		[Display(ResourceType = typeof(Dictionary), Name = Strings.Labels.LanguageLabel)]
 		public string LanguageName => Language.GetLocalisedLanguageName();
 
 	    public string LanguageCode => Language.GetLanguageCode();
-	}
+
+	    [LinkedColumn(LinkedTableName = "ArchiveCategory", LinkedColumnName = "Name", ForeignKey = "CategoryId")]
+	    [Display(ResourceType = typeof(Dictionary), Name = Strings.Names.Category)]
+	    public string Category { get; set; }
+    }
 }

@@ -14,11 +14,10 @@ namespace K9.Base.DataAccessLayer.Database
 			Configuration.ProxyCreationEnabled = false;
 			Configuration.AutoDetectChangesEnabled = false;
 		}
-
-
-		#region Tables
-
-		public DbSet<User> Users { get; set; }
+        
+	    public DbSet<ArchiveItem> ArchiveItems { get; set; }
+	    public DbSet<ArchiveCategory> ArchiveCategories { get; set; }
+        public DbSet<User> Users { get; set; }
 		public DbSet<Country> Countries { get; set; }
 		public DbSet<Role> Roles { get; set; }
 		public DbSet<UserRole> UserRoles { get; set; }
@@ -26,19 +25,11 @@ namespace K9.Base.DataAccessLayer.Database
 		public DbSet<RolePermission> RolePermissions { get; set; }
 		public DbSet<Message> Messages { get; set; }
 		public DbSet<NewsItem> NewsItems { get; set; }
-		
-		#endregion
-
-
-		#region Event Handlers
-
-		protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        
+	    protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{
 			modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 			modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
 		}
-
-		#endregion
-
 	}
 }

@@ -45,6 +45,7 @@ namespace K9.Base.DataAccessLayer.Database
 		protected override void Seed(T context)
 		{
 			CountriesSeeder.SeedCountries(context);
+            ArchiveCategoriesSeeder.SeedArchiveCategories(context);
 		}
 
 	}
